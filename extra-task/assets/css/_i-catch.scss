@@ -1,0 +1,61 @@
+.i-catch {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  @include tab {
+    height: 90vh;
+  }
+  &__text {
+    width: 46%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tab {
+      width: 100%;
+      background-image: url(../images/img1.png);
+      background-size: cover;
+      // background-position: 0% 0%;
+      color: white;
+    }
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      height: 27%;
+      @include tab {
+        flex-direction: column-reverse;
+        height: 13%;
+      }
+      p {
+        @include tab {
+          text-shadow: 0 3px 16px #000000;
+        }
+      }
+      &__first {
+        font-size: 3.8rem;
+        font-family: "Sawarabi Mincho", sans-serif;
+        @include sp {
+          font-size: 2.3rem;
+        }
+      }
+      &__second {
+        text-align: left;
+        font-size: 3.8rem;
+        font-family: "Zapfino", sans-serif;
+        @include sp {
+          font-size: 2.8rem;
+        }
+      }
+    }
+  }
+  &__img {
+    width: 54%;
+    background-image: url(../images/img1.png);
+    background-size: cover;
+    background-position: 50% 0%;
+    @include tab {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.menu {
+  height: 100vh;
+  text-align: center;
+  padding-top: 28vh;
+  @include sp {
+    padding: 0 20px;
+    height: auto;
+  }
+  &__title {
+    width: 180px;
+    margin-left: 10%;
+    @extend %title;
+    @include sp {
+      margin: 50px 0;
+    }
+  }
+  &__container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    @include sp {
+      width: 100%;
+      flex-direction: column;
+      text-align: start;
+    }
+    &__items {
+      position: relative;
+      width: 26%;
+      @include sp {
+        width: 100%;
+        margin-bottom: 60px;
+      }
+      img {
+        width: 100%;
+      }
+      &__text {
+        .course {
+          text-align: center;
+          font-size: 3rem;
+          margin: 6% auto;
+          @include sp {
+            text-align: start;
+          }
+        }
+        .detail {
+          margin-bottom: 35px;
+        }
+        .cost {
+          position: absolute;
+          bottom: 0;
+          right: 5px;
+          text-align: end;
+        }
+      }
+    }
+  }
+}

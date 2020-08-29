@@ -1,0 +1,64 @@
+footer {
+  height: 18vh;
+  @include sp {
+    margin: 0 20px;
+  }
+  .footer__container {
+    width: 83%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    border-top: 1px solid #7070704d;
+    padding-top: 8vh;
+    @include sp {
+      padding: 0;
+    }
+    @include sp {
+      width: 100%;
+      flex-direction: column-reverse;
+    }
+    &__left {
+      display: flex;
+      align-items: center;
+      @include sp {
+        justify-content: space-between;
+      }
+      &__logo {
+        color: white;
+        p {
+          // font: normal normal normal 32px/32px Roboto Mono for Powerline;
+          font-size: 3.2rem;
+          letter-spacing: 3.2px;
+          color: #7070704d;
+          @include sp {
+            font-size: 1.8rem;
+          }
+        }
+      }
+      &__sns {
+        .fa-twitter {
+          margin-left: 20px;
+          margin-right: 10px;
+        }
+        .fab {
+          height: 100%;
+          font-size: 25px;
+        }
+      }
+    }
+    .reserve {
+      margin-right: 5px;
+      width: 184px;
+      font-size: 1.8rem;
+      color: $gray;
+      border: 1px solid #707070;
+      letter-spacing: 1.8px;
+      background-color: white;
+      @include sp {
+        margin: 40px auto;
+        width: 184px;
+        height: 37px;
+      }
+    }
+  }
+}

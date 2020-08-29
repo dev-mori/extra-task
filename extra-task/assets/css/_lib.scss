@@ -1,0 +1,45 @@
+@mixin pc {
+  @media screen and (min-width: 960px) {
+    @content;
+  }
+}
+@mixin tab {
+  @media screen and (max-width: 959px) {
+    @content;
+  }
+}
+@mixin sp {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+html {
+  font-size: 62.5%; //10px
+}
+body {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.6rem;
+  line-height: 1.22;
+  letter-spacing: 0.18rem;
+}
+$gray: #707070;
+$cream: #a193861f;
+$soil: #a1938689;
+%title {
+  width: 235px;
+  display: flex;
+  align-items: center;
+  color: $gray;
+  font-size: 1.8rem;
+  letter-spacing: 5.4px;
+  margin-bottom: 10px;
+  &:after {
+    margin-left: 20px;
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background: $gray;
+    display: block;
+  }
+}

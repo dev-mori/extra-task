@@ -1,0 +1,122 @@
+.concept {
+  position: relative;
+  height: 100vh;
+  background-color: $cream;
+  display: flex;
+  justify-content: center;
+  @include pc {
+    align-items: center;
+  }
+  @include tab {
+    width: 100%;
+    padding: 10vh 20px;
+  }
+  &__container {
+    width: 64%;
+    z-index: 10;
+    text-align: start;
+    @include tab {
+      width: 100%;
+    }
+    // background-color: yellow;
+
+    .title {
+      @extend %title;
+      @include tab {
+        padding-bottom: 10vh;
+      }
+    }
+    &__images {
+      display: flex;
+      justify-content: space-between;
+      height: 35vh;
+      object-fit: cover;
+      .img1 {
+        width: 60%;
+        overflow: hidden;
+        @include tab {
+          width: 49%;
+        }
+        img {
+          @include tab {
+            transform: translate(-60%, 0);
+          }
+        }
+      }
+      .img2 {
+        width: 35%;
+        overflow: hidden;
+        @include tab {
+          width: 49%;
+        }
+        img {
+          @include tab {
+            transform: translate(-30%, 0);
+          }
+        }
+      }
+      img {
+        width: 100%;
+        @include tab {
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60%;
+    background-color: $soil;
+    display: flex;
+    justify-content: center;
+    @include tab {
+      height: 70%;
+    }
+    &__contents {
+      position: absolute;
+      bottom: 0;
+      width: 70%;
+      margin: 0 auto;
+      padding: 0 20px 90px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: white;
+      @include tab {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        padding: 0 20px 50px;
+        margin: 0 auto;
+      }
+      &__title {
+        @extend .i-catch__text__container__first;
+        width: 45%;
+        letter-spacing: 1.6rem;
+        @include tab {
+          width: 100%;
+          font-size: 1.8rem;
+          letter-spacing: 7.2px;
+          margin-bottom: 4vh;
+        }
+      }
+      &__text-pc {
+        width: 45%;
+        @include tab {
+          display: none;
+        }
+      }
+      &__text-tab {
+        font-size: 1.6rem;
+        letter-spacing: 1.6px;
+        @include pc {
+          display: none;
+        }
+      }
+    }
+  }
+}
